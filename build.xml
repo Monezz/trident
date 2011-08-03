@@ -46,7 +46,9 @@
 	<property name="trident.output.dir" value="${trident.build.dir}/classes" />
 	<property name="trident.drop.dir" value="${module.trident.basedir}/drop" />
 	<property name="trident.lib.dir" value="${module.trident.basedir}/lib" />
-	<property name="trident.src.dir" value="${module.trident.basedir}/src/" />
+	<property name="trident.src.dir" value="${module.trident.basedir}/src/main/java" />
+	<property name="trident.resources.dir" value="${module.trident.basedir}/src/main/resources" />
+	<property name="trident.src.root.dir" value="${module.trident.basedir}/src/" />
 	<property name="trident.version" value="1.3.0" />
 	<property name="trident.versionName" value="1.3RC Diamond In The Sky" />
 
@@ -75,7 +77,7 @@
 	</path>
 
 	<path id="trident.module.sourcepath.test">
-		<dirset dir="${trident.src.dir}">
+		<dirset dir="${trident.src.root.dir}">
 			<include name="test" />
 		</dirset>
 	</path>
@@ -92,7 +94,7 @@
 			<patternset refid="excluded.from.compilation.trident" />
 		</javac>
 		<copy todir="${trident.output.dir}">
-			<fileset dir="${trident.src.dir}">
+			<fileset dir="${trident.resources.dir}">
 				<patternset refid="javac.resources" />
 				<type type="file" />
 				<patternset refid="excluded.from.compilation.trident" />
@@ -110,7 +112,7 @@
 			<patternset refid="excluded.from.compilation.trident" />
 		</javac>
 		<copy todir="${trident.output.dir}">
-			<fileset dir="${trident.src.dir}">
+			<fileset dir="${trident.resources.dir}">
 				<patternset refid="javac.resources" />
 				<type type="file" />
 				<patternset refid="excluded.from.compilation.trident" />
