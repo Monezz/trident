@@ -10,6 +10,8 @@
     <description>Java animation library </description>
     <url>https://github.com/kirillcool/trident</url>
 
+   <name>trident</name>
+
     <licenses>
         <license>
             <name>Eclipse Public License - v 1.0</name>
@@ -54,4 +56,11 @@
             <version>3.3.0-v3346</version>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <name>Kirill Grouchnikov</name>
+            <url>http://www.pushing-pixels.org</url>
+        </developer>        
+    </developers>
 </project>
